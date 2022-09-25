@@ -1,19 +1,44 @@
-<!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='index.php' content='2'>
-
-    <title>Redirecionando...</title>
+    <meta charset="utf-8"/>
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/functions.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <meta name="google-signin-client_id" content="1046285428289-m8qq1r39eg1uubivdjgjbfhknbrrij26.apps.googleusercontent.com">
 </head>
 <body>
-    <h1>Redirecionando...</h1>
-    <script>
-        setTimeout("location.href = '/index.php';", 2000);
-        
-    </script>
-    <a href="/index.php"><h1>Acessar para Login!</h1></a>
+    <div id="corpo-form-login">
+    <h1>Entrar</h1>
+    
+    <form action="/index.php" method="POST">
+        <input oninput="mascara(this)" type="tel" name="cpf_morador" placeholder="CPF">
+        <input type="password" name="senha_morador" placeholder="Senha">
+        <input type="submit" value="ACESSAR">
+        <a href="01-cadMorador.php">Ainda não é escrito?<strong>Cadastre-se!</strong></a>
+    </form>
+    </div>
+
+    <table id="loggin_loggout">
+        <tr>
+            <th>
+            <div id="g_id_onload"
+         data-client_id="1046285428289-m8qq1r39eg1uubivdjgjbfhknbrrij26.apps.googleusercontent.com"
+         data-login_uri="login/01-loginGoogle.php"
+         data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-shape="rectangular"
+         data-logo_alignment="left">
+      </div>
+            </th>
+        </tr>
+    </table>
 </body>
 </html>
